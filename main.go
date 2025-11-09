@@ -41,7 +41,7 @@ func main() {
 	r := gin.Default()
 
 	// API 接口返回缓存数据
-	r.GET("/api/iplist", func(c *gin.Context) {
+	r.GET("/", func(c *gin.Context) {
 		cacheMutex.RLock()
 		defer cacheMutex.RUnlock()
 		if cache == nil {
